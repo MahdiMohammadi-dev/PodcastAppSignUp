@@ -65,9 +65,10 @@ class _LoginPageState extends State<LoginPage> {
                       children: [
                         TextFormField(
                           keyboardType: TextInputType.name,
-                          decoration: InputDecoration(hintText: "First Name"),
+                          decoration:
+                              const InputDecoration(hintText: "First Name"),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 14,
                         ),
                         TextFormField(
@@ -76,14 +77,14 @@ class _LoginPageState extends State<LoginPage> {
                               const InputDecoration(hintText: "Email Address"),
                           validator: (value) => validateEmail(value),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 14,
                         ),
                         TextFormField(
                           keyboardType: TextInputType.number,
-                          decoration: InputDecoration(hintText: "Age"),
+                          decoration: const InputDecoration(hintText: "Age"),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 14,
                         ),
                         TextFormField(
@@ -96,9 +97,10 @@ class _LoginPageState extends State<LoginPage> {
                               return "oooops!!The Value is Out Of Range!";
                             }
                           },
-                          decoration: InputDecoration(hintText: "User Name"),
+                          decoration:
+                              const InputDecoration(hintText: "User Name"),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 14,
                         ),
                         TextFormField(
@@ -154,8 +156,8 @@ class _LoginPageState extends State<LoginPage> {
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all(
                             male == true
-                                ? Color(0xffFF8C42)
-                                : Color.fromARGB(178, 189, 196, 167),
+                                ? const Color(0xffFF8C42)
+                                : const Color.fromARGB(178, 189, 196, 167),
                           )),
                           child: const Text(
                             "Female",
