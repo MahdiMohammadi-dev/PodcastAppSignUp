@@ -12,6 +12,12 @@ class _LoginPageState extends State<LoginPage> {
   var formkey = GlobalKey<FormState>();
   bool male = true;
 
+  TextEditingController firstNameController = TextEditingController();
+  TextEditingController emailAddressController = TextEditingController();
+  TextEditingController ageController = TextEditingController();
+  TextEditingController userNameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -64,6 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Column(
                       children: [
                         TextFormField(
+                          controller: firstNameController,
                           keyboardType: TextInputType.name,
                           decoration:
                               const InputDecoration(hintText: "First Name"),
@@ -72,6 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 14,
                         ),
                         TextFormField(
+                          controller: emailAddressController,
                           keyboardType: TextInputType.emailAddress,
                           decoration:
                               const InputDecoration(hintText: "Email Address"),
@@ -81,6 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 14,
                         ),
                         TextFormField(
+                          controller: ageController,
                           keyboardType: TextInputType.number,
                           decoration: const InputDecoration(hintText: "Age"),
                         ),
@@ -88,6 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 14,
                         ),
                         TextFormField(
+                          controller: userNameController,
                           keyboardType: TextInputType.name,
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -104,6 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 14,
                         ),
                         TextFormField(
+                          controller: passwordController,
                           obscureText: true,
                           keyboardType: TextInputType.text,
                           decoration:
